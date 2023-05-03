@@ -1,0 +1,78 @@
+Steps to create a project:
+
+File -> New -> Others -> Dynamic Web Project
+
+Then enter the name of the project,
+Select Dynamic Web Module Version -> 2.5
+
+src folder -> will be used to store all of our code files of java
+
+WebContent -> This folder will consists all the HTML/CSS/JS Files to take input from the server end
+
+WEB-INF -> Information of the whole project including the dependencies we are using.
+
+Setup Server:
+
+Download Tomcat 9 > Extract zip file > "Tomcat Folder/conf/tomcat-users.xml"
+
+then
+
+<user username="admin" password="admin" roles="manager-gui,manager-script,manager-jmx,manager-status"/>
+
+add this line between <tomcat-users> tag.
+
+save it
+
+-----------------------------------------------------------------------------------------------
+
+Servlet Technology:
+
+Servlets are used to create a web application (resides at server side and generates a dynamic web page)
+
+
+In web.xml we have to register our servlet in order to map with the url(request)
+
+<servlet> tag is used to define name and class of the servlet.
+<servlet-mapping> tag used to map the url and the name of the servlet.
+
+
+
+<servlet>
+    <servlet-name>First_Servlet</servlet-name>
+    <servlet-class>First_Servlet</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>First_Servlet</servlet-name>
+    <url-pattern>/First_Servlet</url-pattern>
+</servlet-mapping>
+
+
+-----------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
