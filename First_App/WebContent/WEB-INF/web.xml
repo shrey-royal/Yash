@@ -47,4 +47,14 @@
     <servlet-name>welcomeServlet</servlet-name>
     <url-pattern>/welcomeServlet</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>calculateServlet</display-name>
+    <servlet-name>calculateServlet</servlet-name>
+    <servlet-class>calculateServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>calculateServlet</servlet-name>
+    <url-pattern>/calculateServlet</url-pattern>
+  </servlet-mapping>
 </web-app>

@@ -32,7 +32,7 @@ public class validateServlet extends HttpServlet {
 		String username = request.getParameter("username");
 		String password = request.getParameter("password");
 		
-		if(password.equals("Shrey")) {
+		if(password.equals("root")) {
 			System.out.println("User Validated....");
 			RequestDispatcher rd = request.getRequestDispatcher("welcomeServlet");
 			rd.forward(request, response);
@@ -41,7 +41,7 @@ public class validateServlet extends HttpServlet {
 			PrintWriter out = response.getWriter();
 			out.print("Incorrect username or password!");
 			
-			RequestDispatcher rd = request.getRequestDispatcher("/login.html");
+			RequestDispatcher rd = request.getRequestDispatcher("/resultServlet");
 			rd.include(request, response);
 		}
 		

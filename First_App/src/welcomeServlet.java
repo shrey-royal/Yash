@@ -31,7 +31,11 @@ public class welcomeServlet extends HttpServlet {
 		PrintWriter out = response.getWriter();
 		
 		String username = request.getParameter("username");
-		out.print("Welcome, " + username);
+		out.print("<html><head><title>System</title></head><body>");
+		out.print("<h1>Welcome, " + username + "</h1>");
+		out.print("<br><br><br>");
+		out.print("<a href='/First_App/Add.html'>Click this link to add 2 numbers</a>");
+		
 		
 	}
 
