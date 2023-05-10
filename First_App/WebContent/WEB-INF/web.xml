@@ -57,4 +57,14 @@
     <servlet-name>calculateServlet</servlet-name>
     <url-pattern>/calculateServlet</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>redirectServlet</display-name>
+    <servlet-name>redirectServlet</servlet-name>
+    <servlet-class>redirectServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>redirectServlet</servlet-name>
+    <url-pattern>/redirectServlet</url-pattern>
+  </servlet-mapping>
 </web-app>

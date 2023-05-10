@@ -5,6 +5,8 @@
 <title>Index Page</title>
 </head>
 <body>
+
+	<!--
 	<form method="post" action="DemoLogin">
 		Name: <input name="name" placeholder="Enter your Name" type="text">
 		<br><br>
@@ -16,5 +18,25 @@
 		<button type="reset">Reset</button>
 		<button type="submit">Submit</button>
 	</form>
+	
+	-->
+	
+	<form method="post" action="redirectServlet">
+		Enter the name of the site: 
+		<input name="site_url" placeholder="Enter site URL" type="text"/>
+		<br><br>
+		<select name="sites">
+			<option>Select any Site</option>
+			<option value="youtube.com">Youtube</option>
+			<option value="twitter.com">Twitter</option>
+			<option value="instagram.com">Instagram</option>
+			<option value="gtu.ac.in">GTU</option>
+			<option value="facebook.com">Facebook</option>
+			<option value="snapchat.com">Snapchat</option>
+			<option value="google.com">Google</option>
+		</select>
+		<button type="submit">Go to Site</button>
+	</form>
+	
 </body>
 </html>
