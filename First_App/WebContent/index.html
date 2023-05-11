@@ -21,11 +21,11 @@
 	
 	-->
 	
-	<form method="post" action="redirectServlet">
+	<form method="post" action="redirectServlet" target="_blank">
 		Enter the name of the site: 
 		<input name="site_url" placeholder="Enter site URL" type="text"/>
 		<br><br>
-		<select name="sites">
+		<select name="#">
 			<option>Select any Site</option>
 			<option value="youtube.com">Youtube</option>
 			<option value="twitter.com">Twitter</option>
@@ -35,6 +35,37 @@
 			<option value="snapchat.com">Snapchat</option>
 			<option value="google.com">Google</option>
 		</select>
+		
+		<br><br><br>
+		
+		<label for="yt">Youtube: </label>
+		<input id="yt" type="checkbox" name="sites" value="youtube.com"/>
+		<br>
+		
+		<label for="twt">Twitter: </label>
+		<input id="twt" type="checkbox" name="sites" value="twitter.com"/>
+		<br>
+		
+		<label for="inst">Instagram: </label>
+		<input id="inst" type="checkbox" name="sites" value="instagram.com"/>
+		<br>
+		
+		<label for="gtu">GTU: </label>
+		<input id="gtu" type="checkbox" name="sites" value="gtu.ac.in"/>
+		<br>
+		
+		<label for="fb">Facebook: </label>
+		<input id="fb" type="checkbox" name="sites" value="facebook.com"/>
+		<br>
+		
+		<label for="snap">Snapchat: </label>
+		<input id="snap" type="checkbox" name="sites" value="snapchat.com"/>
+		<br>
+		
+		<label for="gg">Google: </label>
+		<input id="gg" type="checkbox" name="sites" value="google.com"/>
+		<br>		
+		
 		<button type="submit">Go to Site</button>
 	</form>
 	

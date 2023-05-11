@@ -1,6 +1,8 @@
 
 
 import java.io.IOException;
+import java.io.PrintWriter;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -23,11 +25,24 @@ public class redirectServlet extends HttpServlet {
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
-	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+	protected void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 //		String site_url = "https://www." + req.getParameter("site_url");
-		String website = "https://www." + req.getParameter("sites");
-		resp.sendRedirect(website);
+//		String website = "https://www." + req.getParameter("sites");
+		String sites[] = req.getParameterValues("sites");
+		
+		for(String i: sites) {
+			System.out.println(i);
+		}
+//		res.sendRedirect("https://www." + sites);
+		
+		PrintWriter out = res.getWriter();
+		for(int i=0; i<sites.length; i++) {
+			out.print("<a href='https://www."+sites[i]+"' target='_blank'>"+ sites[i] +"</a><br><br>");
+		}
+		
+		
+		
 	}
 
 	/**
