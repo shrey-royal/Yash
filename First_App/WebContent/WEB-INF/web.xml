@@ -67,4 +67,30 @@
     <servlet-name>redirectServlet</servlet-name>
     <url-pattern>/redirectServlet</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>Config_Servlet</display-name>
+    <servlet-name>Config_Servlet</servlet-name>
+    <servlet-class>Config_Servlet</servlet-class>
+    
+    <init-param>
+    	<param-name>name</param-name>
+    	<param-value>Yash Soni</param-value>
+    </init-param>
+    
+    <init-param>
+    	<param-name>uname</param-name>
+    	<param-value>yashu</param-value>
+    </init-param>
+    
+    <init-param>
+    	<param-name>password</param-name>
+    	<param-value>yashvi</param-value>
+    </init-param>
+    
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Config_Servlet</servlet-name>
+    <url-pattern>/Config_Servlet</url-pattern>
+  </servlet-mapping>
 </web-app>
