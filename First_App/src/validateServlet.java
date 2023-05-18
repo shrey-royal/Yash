@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 
 import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -31,8 +32,12 @@ public class validateServlet extends HttpServlet {
 		response.setContentType("text/html");
 		String username = request.getParameter("username");
 		String password = request.getParameter("password");
+		ServletContext context = getServletContext();
+		String uname = context.getInitParameter("uname");
+		String pass = context.getInitParameter("password");
 		
-		if(password.equals("root")) {
+		
+		if(username.equals(uname) && password.equals(pass)) {
 			System.out.println("User Validated....");
 			RequestDispatcher rd = request.getRequestDispatcher("welcomeServlet");
 			rd.forward(request, response);

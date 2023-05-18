@@ -9,6 +9,18 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
+  
+  <context-param>
+  	<param-name>uname</param-name>
+  	<param-value>yash</param-value>
+  </context-param>
+  
+  <context-param>
+  	<param-name>password</param-name>
+  	<param-value>yashvi</param-value>
+  </context-param>
+  
+  
   <servlet>
     <servlet-name>First_Servlet</servlet-name>
     <servlet-class>First_Servlet</servlet-class>
@@ -76,16 +88,6 @@
     <init-param>
     	<param-name>name</param-name>
     	<param-value>Yash Soni</param-value>
-    </init-param>
-    
-    <init-param>
-    	<param-name>uname</param-name>
-    	<param-value>yashu</param-value>
-    </init-param>
-    
-    <init-param>
-    	<param-name>password</param-name>
-    	<param-value>yashvi</param-value>
     </init-param>
     
   </servlet>

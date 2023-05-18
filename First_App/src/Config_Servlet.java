@@ -1,6 +1,7 @@
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletConfig;
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -20,6 +21,9 @@ public class Config_Servlet extends HttpServlet {
 		
 		PrintWriter pw = res.getWriter();
 		pw.println("The Name is " + config.getInitParameter("name"));
+		
+		ServletContext context = getServletContext();
+		pw.println("Context: " + context.getInitParameter("password"));
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
