@@ -20,6 +20,20 @@
   	<param-value>yashvi</param-value>
   </context-param>
   
+  <servlet>
+  	<servlet-name>jsp_init</servlet-name>
+  	<jsp-file>/Config.jsp</jsp-file>
+  
+  	<init-param>
+  		<param-name>username</param-name>
+  		<param-value>shrey</param-value>
+  	</init-param>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>jsp_init</servlet-name>
+  	<url-pattern>/config</url-pattern>
+  </servlet-mapping>
   
   <servlet>
     <servlet-name>First_Servlet</servlet-name>

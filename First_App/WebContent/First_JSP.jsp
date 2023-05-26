@@ -13,17 +13,18 @@
 		
 		out.print("Welcome, " + request.getParameter("name") + "<br><br>");	
 		out.print("Redirecting to Youtube...");
+		out.print("" + (1+2) + "");
 		/*
 		out.print("<b>JSP Scriptlet Tag</b><br>");
 		out.print("Used to print the data on the web app directly.<br>");
 		out.print("You can write java Source code in here. and multiple lines can be written in a single tag.<br>");	
 		*/
-		response.setContentType("text/html");
-		response.sendRedirect("https://www.youtube.com");
+		//response.setContentType("text/html");
+		//response.sendRedirect("https://www.youtube.com");
 	%>
 	<br><br>
 	Current Time:
-	<%= Calendar.getInstance().getTime() %>
+	<%= Calendar.getInstance().getTime().getHours() %>
 	<br><br>
 	
 	1+2 = <%= "" + (1+2) + "" %>
