@@ -49,6 +49,15 @@ In web.xml we have to register our servlet in order to map with the url(request)
 
 -----------------------------------------------------------------------------------------------
 
+Session Tracking Techniques:
+	1. Cookies
+		Non-persistent cookie : It is valid for single session only. It is removed each time when user closes the browser.
+
+		Persistent cookie : It is valid for multiple session . It is not removed each time when user closes the browser. It 							is removed only if user logout or signout.
+		
+	2. Hidden Form Field
+	3. URL Rewriting
+	4. HttpSession
 
 
 

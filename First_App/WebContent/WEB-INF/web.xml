@@ -9,32 +9,26 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
-  
   <context-param>
-  	<param-name>uname</param-name>
-  	<param-value>yash</param-value>
+    <param-name>uname</param-name>
+    <param-value>yash</param-value>
   </context-param>
-  
   <context-param>
-  	<param-name>password</param-name>
-  	<param-value>yashvi</param-value>
+    <param-name>password</param-name>
+    <param-value>yashvi</param-value>
   </context-param>
-  
   <servlet>
-  	<servlet-name>jsp_init</servlet-name>
-  	<jsp-file>/Config.jsp</jsp-file>
-  
-  	<init-param>
-  		<param-name>username</param-name>
-  		<param-value>shrey</param-value>
-  	</init-param>
+    <servlet-name>jsp_init</servlet-name>
+    <jsp-file>/Config.jsp</jsp-file>
+    <init-param>
+      <param-name>username</param-name>
+      <param-value>shrey</param-value>
+    </init-param>
   </servlet>
-  
   <servlet-mapping>
-  	<servlet-name>jsp_init</servlet-name>
-  	<url-pattern>/config</url-pattern>
+    <servlet-name>jsp_init</servlet-name>
+    <url-pattern>/config</url-pattern>
   </servlet-mapping>
-  
   <servlet>
     <servlet-name>First_Servlet</servlet-name>
     <servlet-class>First_Servlet</servlet-class>
@@ -98,15 +92,33 @@
     <display-name>Config_Servlet</display-name>
     <servlet-name>Config_Servlet</servlet-name>
     <servlet-class>Config_Servlet</servlet-class>
-    
     <init-param>
-    	<param-name>name</param-name>
-    	<param-value>Yash Soni</param-value>
+      <param-name>name</param-name>
+      <param-value>Yash Soni</param-value>
     </init-param>
-    
   </servlet>
   <servlet-mapping>
     <servlet-name>Config_Servlet</servlet-name>
     <url-pattern>/Config_Servlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>Cook_ies</display-name>
+    <servlet-name>Cook_ies</servlet-name>
+    <servlet-class>Cook_ies</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Cook_ies</servlet-name>
+    <url-pattern>/Cook_ies</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>cookie_1</display-name>
+    <servlet-name>cookie_1</servlet-name>
+    <servlet-class>cookie_1</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>cookie_1</servlet-name>
+    <url-pattern>/cookie_1</url-pattern>
   </servlet-mapping>
 </web-app>
