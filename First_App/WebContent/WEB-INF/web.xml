@@ -121,4 +121,14 @@
     <servlet-name>cookie_1</servlet-name>
     <url-pattern>/cookie_1</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>Remember_Me</display-name>
+    <servlet-name>Remember_Me</servlet-name>
+    <servlet-class>Remember_Me</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Remember_Me</servlet-name>
+    <url-pattern>/Remember_Me</url-pattern>
+  </servlet-mapping>
 </web-app>
