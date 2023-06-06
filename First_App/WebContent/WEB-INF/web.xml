@@ -161,4 +161,24 @@
     <servlet-name>ProfileServlet</servlet-name>
     <url-pattern>/ProfileServlet</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>HFF_Servlet_1</display-name>
+    <servlet-name>HFF_Servlet_1</servlet-name>
+    <servlet-class>HFF_Servlet_1</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>HFF_Servlet_1</servlet-name>
+    <url-pattern>/HFF_Servlet_1</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>HFF_Servlet_2</display-name>
+    <servlet-name>HFF_Servlet_2</servlet-name>
+    <servlet-class>HFF_Servlet_2</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>HFF_Servlet_2</servlet-name>
+    <url-pattern>/HFF_Servlet_2</url-pattern>
+  </servlet-mapping>
 </web-app>
