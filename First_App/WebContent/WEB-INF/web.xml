@@ -181,4 +181,24 @@
     <servlet-name>HFF_Servlet_2</servlet-name>
     <url-pattern>/HFF_Servlet_2</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>httpSession</display-name>
+    <servlet-name>httpSession</servlet-name>
+    <servlet-class>httpSession</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>httpSession</servlet-name>
+    <url-pattern>/httpSession</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>httpSession1</display-name>
+    <servlet-name>httpSession1</servlet-name>
+    <servlet-class>httpSession1</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>httpSession1</servlet-name>
+    <url-pattern>/httpSession1</url-pattern>
+  </servlet-mapping>
 </web-app>
