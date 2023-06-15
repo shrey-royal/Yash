@@ -230,4 +230,23 @@
     <filter-name>MyFilter</filter-name>
     <url-pattern>/FilteredServlet</url-pattern>
   </filter-mapping>
+  <filter>
+    <display-name>FilterTask</display-name>
+    <filter-name>FilterTask</filter-name>
+    <filter-class>FilterTask</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>FilterTask</filter-name>
+    <url-pattern>/FilterTasks</url-pattern>
+  </filter-mapping>
+  <servlet>
+    <description></description>
+    <display-name>FilterTasks</display-name>
+    <servlet-name>FilterTasks</servlet-name>
+    <servlet-class>FilterTasks</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>FilterTasks</servlet-name>
+    <url-pattern>/FilterTasks</url-pattern>
+  </servlet-mapping>
 </web-app>
