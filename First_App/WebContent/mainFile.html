@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Files Upload_Download</title>
+</head>
+<body>
+		<a href="UploadServlet">Upload</a> | 
+		<a href="DownloadServlet">Download</a> | 
+		<a href="mainFile.html">Main</a>
+	<hr>
+	<form action="UploadServlet" method="POST" enctype="multipart/form-data">
+		Select File: <input type="file" name="imageFile"/><br>
+		<input type="submit" value="Upload File"/>
+	</form>
+</body>
+</html>

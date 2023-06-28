@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
   <display-name>First_App</display-name>
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
@@ -248,5 +248,22 @@
   <servlet-mapping>
     <servlet-name>FilterTasks</servlet-name>
     <url-pattern>/FilterTasks</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>UploadServlet</display-name>
+    <servlet-name>UploadServlet</servlet-name>
+    <servlet-class>UploadServlet</servlet-class>
+    
+    <multipart-config>
+    	<location>C:\Users\Shrey Kadia\Documents\Shrey@Royal\Java\Yash\First_App\tmp</location>
+    	<max-file-size>1048576</max-file-size>	<!-- 1MB -->
+    	<max-request-size>2097152</max-request-size> <!-- 2MB -->
+    	<file-size-threshold>0</file-size-threshold>
+    </multipart-config>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UploadServlet</servlet-name>
+    <url-pattern>/UploadServlet</url-pattern>
   </servlet-mapping>
 </web-app>
