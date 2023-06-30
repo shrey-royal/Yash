@@ -34,9 +34,9 @@ public class DBConnection {
 		return conn;
 	}
 	
-	public static void main(String[] args) {		
-		System.out.println(DBConnection.getConnection());
-	}
+//	public static void main(String[] args) {		
+//		System.out.println(DBConnection.getConnection());
+//	}
 	
 	
 }
