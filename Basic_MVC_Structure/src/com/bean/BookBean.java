@@ -8,13 +8,13 @@ package com.bean;
  * 
  */
 
-public class Book {
+public class BookBean {
 	protected int id;
 	protected String title;
 	protected String author;
 	protected float price;
 	
-	public Book() {
+	public BookBean() {
 		// TODO Auto-generated constructor stub
 	}
 

@@ -9,4 +9,14 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
+  <servlet>
+    <description></description>
+    <display-name>AddNewBook</display-name>
+    <servlet-name>AddNewBook</servlet-name>
+    <servlet-class>com.controller.AddNewBook</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AddNewBook</servlet-name>
+    <url-pattern>/new</url-pattern>
+  </servlet-mapping>
 </web-app>
