@@ -19,4 +19,14 @@
     <servlet-name>AddNewBook</servlet-name>
     <url-pattern>/new</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ListAllBooks</display-name>
+    <servlet-name>ListAllBooks</servlet-name>
+    <servlet-class>com.controller.ListAllBooks</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ListAllBooks</servlet-name>
+    <url-pattern>/list</url-pattern>
+  </servlet-mapping>
 </web-app>

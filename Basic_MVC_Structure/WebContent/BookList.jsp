@@ -11,9 +11,9 @@
 	<center>
 		<h1>Book Store</h1>
 		<h2>
-			<a href="/new">Add New Book</a>
+			<a href="AddBookForm.html">Add New Book</a>
 			&nbsp;&nbsp;&nbsp;
-			<a href="/list">List All Books</a>
+			<a href="list">List All Books</a>
 		</h2>
 	</center>
 	<div align="center">
@@ -26,7 +26,7 @@
 				<th>Price</th>
 				<th>Actions</th>
 			</tr>
-			<c:forEach var="book" items="${ book.id }">
+			<c:forEach var="book" items="${ books }">
 				<tr>
 					<td><c:out value="${ book.id }"/></td>
 					<td><c:out value="${ book.title }"/></td>
@@ -34,7 +34,7 @@
 					<td><c:out value="${ book.price }"/></td>
 					<td>
 						<a href="/edit?id=<c:out value='${ book.id }'/>">Edit</a>
-						&nbsp;&nbsp;&nbsp;&nbsp;
+						&nbsp;&nbsp;<b>|</b>&nbsp;&nbsp;
 						<a href="/delete?id=<c:out value='${ book.id }'/>">Delete</a>
 					</td>
 				</tr>

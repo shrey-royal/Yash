@@ -2,7 +2,9 @@ package com.dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 import com.bean.BookBean;
 import com.util.DBConnection;
@@ -28,5 +30,30 @@ public class BookDAO {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
+	}
+	
+	public ArrayList<BookBean> listBook() {
+		try {
+			String listQuery = "SELECT * FROM book";
+			Connection conn = DBConnection.getConnection();
+			
+			PreparedStatement pstmt = conn.prepareStatement(listQuery);
+			ResultSet rs = pstmt.executeQuery();	//select
+			
+			ArrayList<BookBean> books = new ArrayList<BookBean>();
+			while(rs.next()) {
+				BookBean bookBean = new BookBean();
+				bookBean.setId(rs.getInt("book_id"));
+				bookBean.setTitle(rs.getString("title"));
+				bookBean.setAuthor(rs.getString("author"));
+				bookBean.setPrice(rs.getFloat("price"));
+				books.add(bookBean);
+			}
+			return books;
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return null;
 	}
 }

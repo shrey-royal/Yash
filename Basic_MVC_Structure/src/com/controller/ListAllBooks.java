@@ -1,6 +1,7 @@
 package com.controller;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -11,30 +12,21 @@ import javax.servlet.http.HttpServletResponse;
 import com.bean.BookBean;
 import com.dao.BookDAO;
 
-public class AddNewBook extends HttpServlet {
+public class ListAllBooks extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
-    public AddNewBook() {
+    public ListAllBooks() {
         super();
     }
 
 	protected void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
-		String title = req.getParameter("title");
-		String author = req.getParameter("author");
-		String price = req.getParameter("price");
-		
-		System.out.println("Title: " + title + "\nAuthor: " + author + "\nPrice: " + price);
-		
-		BookBean book = new BookBean();
 		BookDAO bookDao = new BookDAO();
-		
-		book.setTitle(title);
-		book.setAuthor(author);
-		book.setPrice(Float.parseFloat(price));
-		
-		bookDao.insertBook(book);
-		
-		RequestDispatcher rd = req.getRequestDispatcher("list");
+		ArrayList<BookBean> books = bookDao.listBook();
+		for (BookBean bookBean : books) {
+			System.out.println(bookBean.getTitle());
+		}
+		req.setAttribute("books", books);
+		RequestDispatcher rd = req.getRequestDispatcher("BookList.jsp");
 		rd.forward(req, res);
 	}
 
