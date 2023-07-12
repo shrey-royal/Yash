@@ -22,6 +22,7 @@ public class BookDAO {
 			pstmt.setFloat(3, book.getPrice());
 			
 			int i = pstmt.executeUpdate();
+//			System.out.println("Insert Query Response -> " + pstmt.executeUpdate());
 			if(i == 1) {
 				System.out.println("Book Added Successfully!");
 			} else {
@@ -56,4 +57,32 @@ public class BookDAO {
 		}
 		return null;
 	}
+
+	public BookBean getBookbyBookId(int id) {
+		try {
+			String selectQuery = "SELECT * from book WHERE book_id = ?";
+			Connection conn = DBConnection.getConnection();
+			
+			PreparedStatement pstmt = conn.prepareStatement(selectQuery);
+			pstmt.setInt(1, id);
+			
+			ResultSet rs = pstmt.executeQuery();
+			
+			if(rs.next()) {
+				BookBean bookBean = new BookBean();
+				bookBean.setId(rs.getInt("book_id"));
+				bookBean.setTitle(rs.getString("title"));
+				bookBean.setAuthor(rs.getString("author"));
+				bookBean.setPrice(rs.getFloat("price"));
+				return bookBean;
+			}
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
+		return null;
+	}
+	
+	
 }
