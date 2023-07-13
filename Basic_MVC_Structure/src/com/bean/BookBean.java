@@ -48,5 +48,5 @@ public class BookBean {
 
 	public void setPrice(float price) {
 		this.price = price;
-	}	
+	}
 }

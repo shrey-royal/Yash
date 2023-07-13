@@ -17,7 +17,7 @@
 		</h2>
 	</center>
 	<div align="center">
-			<form action="#" method="post">
+			<form action="update" method="post">
 			<table border="1" cellpadding="5">
 				<caption> <h2> Edit Book </h2> </caption>
 				<input type="hidden" name="id" value="<c:out value='${ book.id }' />" />

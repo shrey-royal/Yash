@@ -39,4 +39,14 @@
     <servlet-name>EditServlet</servlet-name>
     <url-pattern>/edit</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>UpdateBookServlet</display-name>
+    <servlet-name>UpdateBookServlet</servlet-name>
+    <servlet-class>com.controller.UpdateBookServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UpdateBookServlet</servlet-name>
+    <url-pattern>/update</url-pattern>
+  </servlet-mapping>
 </web-app>
