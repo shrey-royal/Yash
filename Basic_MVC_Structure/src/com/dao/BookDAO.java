@@ -83,6 +83,29 @@ public class BookDAO {
 		
 		return null;
 	}
+
+	public void updateBook(BookBean bookBean) {
+		try {
+			String updateQuery = "UPDATE book SET title=?, author=?, price=? WHERE book_id = ?";
+			Connection conn = DBConnection.getConnection();
+			
+			PreparedStatement pstmt = conn.prepareStatement(updateQuery);
+			pstmt.setString(1, bookBean.getTitle());
+			pstmt.setString(2, bookBean.getAuthor());
+			pstmt.setFloat(3, bookBean.getPrice());
+			pstmt.setInt(4, bookBean.getId());
+			
+			int i = pstmt.executeUpdate();
+			if(i == 1) {
+				System.out.println("Book Updated Successfully!");
+			} else {
+				System.out.println("Failed to Update Book!");
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+	}
 	
 	
 }

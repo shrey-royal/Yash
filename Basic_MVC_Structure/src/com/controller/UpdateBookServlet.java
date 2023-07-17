@@ -4,12 +4,14 @@ import java.io.IOException;
 import java.util.EnumMap;
 import java.util.Enumeration;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.bean.BookBean;
+import com.dao.BookDAO;
 
 public class UpdateBookServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -37,7 +39,12 @@ public class UpdateBookServlet extends HttpServlet {
 		bookBean.setAuthor(author);
 		bookBean.setPrice(Float.parseFloat(price));
 		
+		BookDAO book = new BookDAO();
 		
+		book.updateBook(bookBean);
+		
+		RequestDispatcher rd = req.getRequestDispatcher("list");
+		rd.forward(req, res);
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
