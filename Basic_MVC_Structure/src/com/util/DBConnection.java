@@ -34,8 +34,23 @@ public class DBConnection {
 		return conn;
 	}
 	
+	public static void disconnect(Connection conn) {
+		try {
+			if(conn != null || !conn.isClosed()) {
+				conn.close();
+				System.out.println("DB Connection closed successfully...");
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
+	
 //	public static void main(String[] args) {		
-//		System.out.println(DBConnection.getConnection());
+//		
+//		Connection conn = DBConnection.getConnection();
+//		
+//		System.out.println(conn);
+//		DBConnection.disconnect(conn);
 //	}
 	
 	

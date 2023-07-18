@@ -2,7 +2,7 @@
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
   <display-name>Basic_MVC_Structure</display-name>
   <welcome-file-list>
-  	<welcome-file>AddBookForm.html</welcome-file>
+    <welcome-file>AddBookForm.html</welcome-file>
     <welcome-file>index.html</welcome-file>
     <welcome-file>index.htm</welcome-file>
     <welcome-file>index.jsp</welcome-file>
@@ -49,5 +49,15 @@
   <servlet-mapping>
     <servlet-name>UpdateBookServlet</servlet-name>
     <url-pattern>/update</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>DeleteBook</display-name>
+    <servlet-name>DeleteBook</servlet-name>
+    <servlet-class>com.controller.DeleteBook</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DeleteBook</servlet-name>
+    <url-pattern>/delete</url-pattern>
   </servlet-mapping>
 </web-app>

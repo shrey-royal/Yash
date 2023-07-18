@@ -1,9 +1,7 @@
 package com.controller;
 
 import java.io.IOException;
-import java.util.ArrayList;
 
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -12,22 +10,26 @@ import javax.servlet.http.HttpServletResponse;
 import com.bean.BookBean;
 import com.dao.BookDAO;
 
-public class ListAllBooks extends HttpServlet {
+public class DeleteBook extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
-    public ListAllBooks() {
+    public DeleteBook() {
         super();
     }
 
 	protected void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
+		int id = Integer.parseInt(req.getParameter("id"));
 		BookDAO bookDao = new BookDAO();
-		ArrayList<BookBean> books = bookDao.listBook();
-//		for (BookBean bookBean : books) {
-//			System.out.println(bookBean.getTitle());
-//		}
-		req.setAttribute("books", books);
-		RequestDispatcher rd = req.getRequestDispatcher("BookList.jsp");
-		rd.forward(req, res);
+		BookBean bookBean = bookDao.getBookbyBookId(id);
+		
+		System.out.println("Book Details to be deleted:");
+		System.out.println("Book Id: " + bookBean.getId());
+		System.out.println("Book Title: " + bookBean.getTitle());
+		System.out.println("Book Author: " + bookBean.getAuthor());
+		System.out.println("Book Price: " + bookBean.getPrice());
+		
+		bookDao.deleteBook(id);
+		res.sendRedirect("list");
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

@@ -10,11 +10,12 @@ import com.bean.BookBean;
 import com.util.DBConnection;
 
 public class BookDAO {
+	private Connection conn = null;
 	
 	public void insertBook(BookBean book) {
 		try {
 			String insertQuery = "INSERT INTO book (title, author, price) VALUES (?, ?, ?)";
-			Connection conn = DBConnection.getConnection();
+			conn = DBConnection.getConnection();
 			
 			PreparedStatement pstmt = conn.prepareStatement(insertQuery);
 			pstmt.setString(1, book.getTitle());
@@ -28,6 +29,7 @@ public class BookDAO {
 			} else {
 				System.out.println("Failed to Add Book!");
 			}
+			DBConnection.disconnect(conn);
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
@@ -36,7 +38,7 @@ public class BookDAO {
 	public ArrayList<BookBean> listBook() {
 		try {
 			String listQuery = "SELECT * FROM book";
-			Connection conn = DBConnection.getConnection();
+			conn = DBConnection.getConnection();
 			
 			PreparedStatement pstmt = conn.prepareStatement(listQuery);
 			ResultSet rs = pstmt.executeQuery();	//select
@@ -50,6 +52,7 @@ public class BookDAO {
 				bookBean.setPrice(rs.getFloat("price"));
 				books.add(bookBean);
 			}
+			DBConnection.disconnect(conn);
 			return books;
 			
 		} catch (Exception e) {
@@ -61,7 +64,7 @@ public class BookDAO {
 	public BookBean getBookbyBookId(int id) {
 		try {
 			String selectQuery = "SELECT * from book WHERE book_id = ?";
-			Connection conn = DBConnection.getConnection();
+			conn = DBConnection.getConnection();
 			
 			PreparedStatement pstmt = conn.prepareStatement(selectQuery);
 			pstmt.setInt(1, id);
@@ -76,7 +79,7 @@ public class BookDAO {
 				bookBean.setPrice(rs.getFloat("price"));
 				return bookBean;
 			}
-			
+			DBConnection.disconnect(conn);
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
@@ -87,7 +90,7 @@ public class BookDAO {
 	public void updateBook(BookBean bookBean) {
 		try {
 			String updateQuery = "UPDATE book SET title=?, author=?, price=? WHERE book_id = ?";
-			Connection conn = DBConnection.getConnection();
+			conn = DBConnection.getConnection();
 			
 			PreparedStatement pstmt = conn.prepareStatement(updateQuery);
 			pstmt.setString(1, bookBean.getTitle());
@@ -101,10 +104,29 @@ public class BookDAO {
 			} else {
 				System.out.println("Failed to Update Book!");
 			}
+			DBConnection.disconnect(conn);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		
+	}
+
+	public void deleteBook(int id) {
+		try {
+			String deleteQuery = "DELETE FROM Book WHERE book_id = ?";
+			conn = DBConnection.getConnection();
+			
+			PreparedStatement pstmt = conn.prepareStatement(deleteQuery);
+			pstmt.setInt(1, id);
+			
+			pstmt.execute();
+			pstmt.close();
+			
+			DBConnection.disconnect(conn);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 	
 	
