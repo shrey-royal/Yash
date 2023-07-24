@@ -1,0 +1,21 @@
+1. Write a program to find the maximum element in an array.
+2. Write a program to find the minimum element in an array.
+3. Write a program to calculate the sum of all elements in an array.
+4. Write a program to find the average of all elements in an array.
+5. Write a program to count the number of occurrences of a specific element in an array.
+6. Write a program to reverse the elements of an array.
+7. Write a program to check if an array is sorted in ascending order.
+8. Write a program to remove duplicates from an array.
+9. Write a program to find the second largest element in an array.
+10. Write a program to find the common elements between two arrays.
+
+
+Complex: 
+
+1. Write a program to find the longest increasing subarray within an array. The program should return the starting and ending indices of the subarray.
+
+2. Given an array of integers, write a program to find the subarray with the maximum sum. The program should return the sum of the subarray and the starting and ending indices.
+
+3. Implement a program to rotate the elements of an array to the right by a given number of positions. For example, if the array is [1, 2, 3, 4, 5] and the rotation is 2 positions, the resulting array would be [4, 5, 1, 2, 3].
+
+4. Write a program to find the intersection of two arrays. The intersection should contain only unique elements that are present in both arrays, and the program should return the intersection as a new array.
