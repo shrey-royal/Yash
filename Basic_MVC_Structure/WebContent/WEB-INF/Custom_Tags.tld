@@ -1,0 +1,22 @@
+<taglib>
+	<tlib-version>1.0</tlib-version>
+	<jsp-version>2.0</jsp-version>
+	<short-name>ctag</short-name>
+	
+	<tag>
+		<name>Hello</name>
+		<tag-class>com.util.HelloTagHandler</tag-class>
+		<body-content>empty</body-content>
+	</tag>
+	
+	<tag>
+		<name>Greet</name>
+		<tag-class>com.util.GreetTagHandler</tag-class>
+		<body-content>empty</body-content>
+		<attribute>
+			<name>name</name>
+			<required>true</required>
+		</attribute>
+	</tag>
+	
+</taglib>
