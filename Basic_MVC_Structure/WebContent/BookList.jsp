@@ -40,6 +40,8 @@
 					<td><c:out value="${ book.author }"/></td>
 					<td><c:out value="${ book.price }"/></td>
 					<td>
+						<a href="UploadBook.html?id=<c:out value='${ book.id }'/>">Upload</a>
+						&nbsp;&nbsp;<b>|</b>&nbsp;&nbsp;
 						<a href="edit?id=<c:out value='${ book.id }'/>">Edit</a>
 						&nbsp;&nbsp;<b>|</b>&nbsp;&nbsp;
 						<a href="delete?id=<c:out value='${ book.id }'/>">Delete</a>
