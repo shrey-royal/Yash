@@ -60,4 +60,14 @@
     <servlet-name>DeleteBook</servlet-name>
     <url-pattern>/delete</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>DownloadBookServlet</display-name>
+    <servlet-name>DownloadBookServlet</servlet-name>
+    <servlet-class>com.controller.DownloadBookServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DownloadBookServlet</servlet-name>
+    <url-pattern>/DownloadBookServlet</url-pattern>
+  </servlet-mapping>
 </web-app>
