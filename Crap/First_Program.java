@@ -1,3 +1,4 @@
+package Crap;
 public class First_Program {}
 
 class A {

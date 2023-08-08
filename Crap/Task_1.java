@@ -1,3 +1,4 @@
+package Crap;
 public class Task_1 {
     public static void main(String[] args) {
         int[] arr1 = { 1, 2, 3, 4, 5 };

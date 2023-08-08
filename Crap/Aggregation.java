@@ -1,3 +1,4 @@
+package Crap;
 /*
  * What is aggregation?
  * > Aggregation is a special form of association where objects are assembled or

@@ -1,3 +1,4 @@
+package Crap;
 public class String_BB {
     public static void main(String[] args) {
         String s1 = "Hello";

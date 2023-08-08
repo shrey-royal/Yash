@@ -1,3 +1,4 @@
+package Crap;
 import java.util.Arrays;
 
 public class Array_Task_Palindrome {

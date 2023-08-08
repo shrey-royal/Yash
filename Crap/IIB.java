@@ -1,3 +1,4 @@
+package Crap;
 public class IIB {
     int i;
     {

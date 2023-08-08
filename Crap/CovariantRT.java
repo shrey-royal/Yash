@@ -1,3 +1,4 @@
+package Crap;
 class Parent {
     public Parent m1() {
         System.out.println("Parent class m1 method");
