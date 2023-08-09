@@ -30,6 +30,45 @@ Tasks:
 Problem 1: Library Management System
 Create a library management system with two packages: 'library' and 'main'. The 'library' package should contain classes for books and users, with appropriate encapsulation of their attributes. The 'main' package should provide methods to borrow and return books while ensuring proper encapsulation.
 
+**Problem Statement: Library Management System**
+
+**Description:**
+
+You are tasked with creating a library management system in Java. The system should be divided into two packages: `library` and `main`. The `library` package will contain classes that represent books and users of the library, with appropriate encapsulation of their attributes. The `main` package should provide methods to borrow and return books while ensuring proper encapsulation.
+
+**Package Structure:**
+
+1. `library` package:
+   - `Book` class: Represents a book with attributes like title, author, ISBN, and availability. Use encapsulation to protect the book's attributes.
+   - `User` class: Represents a user of the library with attributes like name, ID, and borrowed books. Encapsulate the user's attributes properly.
+
+2. `main` package:
+   - `LibrarySystem` class: Contains the main method. Simulate the library system by creating instances of books and users, and provide methods for borrowing and returning books. Ensure that the borrowing and returning processes modify the book availability and user's borrowed books list appropriately.
+
+**Requirements:**
+
+1. Define the `Book` class with encapsulated attributes (title, author, ISBN, availability).
+2. Define the `User` class with encapsulated attributes (name, ID, borrowed books list).
+3. Implement methods in the `LibrarySystem` class for:
+   - Registering new users.
+   - Adding new books to the library's collection.
+   - Displaying available books.
+   - Borrowing a book (updating user's borrowed books list and book availability).
+   - Returning a book (updating user's borrowed books list and book availability).
+   - Displaying a user's borrowed books.
+
+**Constraints:**
+
+- Ensure that attributes of the `Book` and `User` classes are private and accessible through appropriate getters and setters.
+- Use meaningful method and variable names.
+- Demonstrate the proper use of encapsulation to protect data integrity.
+
+**Note:**
+
+This problem assesses your ability to design and implement a library management system using encapsulation principles in Java. Make sure to follow best practices in terms of encapsulation, naming conventions, and organization of classes and packages.
+
+----------------------------------------------------------------------------------------
+
 Problem 2: Banking Application
 Design a banking application with packages 'bank', 'account', and 'main'. The 'bank' package should contain a 'Bank' class with a list of accounts. The 'account' package should have classes representing different types of accounts, each with encapsulated account information. The 'main' package should simulate transactions between accounts.
 
