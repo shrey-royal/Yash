@@ -70,7 +70,7 @@ Input:
 
 Output:
 ```
-"*R*C*CEC*A*R*"
+"*R*C*CEC*R*"
 ```
 
 In this example, the input string "racecar" is a palindrome. The alternating characters in reverse and original order result in "*R*C*CEC*A*R*". After converting to uppercase and replacing vowels with "*", the final output is "*R*C*CEC*A*R*".
@@ -132,5 +132,30 @@ Explanation of each part of the output:
 - `LL`: The longest palindromic substring "ll" in uppercase.
 
 In this example, since "hello" is not a palindrome, we find the longest palindromic substring ("ll"), convert it to uppercase, and replace vowels with "*". This demonstrates the program's ability to handle non-palindromic input and perform the specified transformations accordingly.
+
+
+First check string for palindrome or not:
+if palindrome then
+    reverse the string
+    then alternate the characters
+    then convert to uppercase
+    then replace vowels with *
+else
+    find the longest palindromic substring
+    then convert to uppercase
+    then replace vowels with *
+end if
+
+
+racecar is a palindrome
+so reverse the string
+racecar
+then alternate the characters (means insert * between each character)
+*r*a*c*e*c*a*r*
+then convert to uppercase
+*R*A*C*E*C*A*R*
+then replace vowels with *
+*R*C*CEC*R*
+
 
 */
