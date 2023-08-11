@@ -108,4 +108,29 @@ Explanation of each part of the output:
 This example demonstrates the process of checking for palindromes, manipulating strings using the `StringBuffer` class, and applying specific transformations to characters based on their positions and properties.
 
 
+---
+
+example 2:
+
+
+Input: "hello"
+
+Step 1: Check if the input string is a palindrome.
+The input string "hello" does not read the same forwards and backwards, so it is not a palindrome.
+
+Step 2: Find the Longest Palindromic Substring.
+The longest palindromic substring within "hello" is "ll".
+
+Step 3: Convert to Uppercase and Replace Vowels.
+After converting "ll" to uppercase and replacing vowels with "*", we get: "*LL*"
+
+So, the final output is: "*LL*"
+
+Explanation of each part of the output:
+
+- `*`: This is inserted between every pair of characters, as required by the alternating characters in reverse and original order.
+- `LL`: The longest palindromic substring "ll" in uppercase.
+
+In this example, since "hello" is not a palindrome, we find the longest palindromic substring ("ll"), convert it to uppercase, and replace vowels with "*". This demonstrates the program's ability to handle non-palindromic input and perform the specified transformations accordingly.
+
 */
