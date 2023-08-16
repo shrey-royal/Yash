@@ -1,0 +1,29 @@
+Q. What is Exception?
+A. An exception is an event that occurs during the execution of a program that disrupts the normal flow of instructions.
+
+Q. Types of Exception?
+A. There are two types of exceptions:
+1. Checked Exception: It is checked at compile-time. It is also called compile time exception. It is checked by the compiler at compile time. If we do not handle these exceptions, program will not compile. Example: IOException, SQLException etc.
+
+2. Unchecked Exception: It is checked at run-time. It is also called run time exception. It is checked by the JVM at run time. If we do not handle these exceptions, program will compile successfully but, at run time, it will throw an exception. Example: ArithmeticException, NullPointerException etc.
+
+List Of Keywords Used in Exception in Java:
+- Exception Handling Keywords: There are 5 keywords used in java exception handling.
+
+- try
+- catch
+- finally
+- throw
+- throws
+
+- try: The try keyword is used to specify a block where we should place exception code. The try block must be followed by either catch or finally. It means, we can't use try block alone.
+
+- catch: The catch block is used to handle the exception. It must be preceded by try block which means we can't use catch block alone. It can be followed by finally block later.
+
+- finally: The finally block is used to execute the important code of the program. It is executed whether an exception is handled or not.
+
+- throw: The throw keyword is used to throw an exception.
+
+- throws: The throws keyword is used to declare exceptions. It doesn't throw an exception. It specifies that there may occur an exception in the method. It is always used with method signature.
+
+- finally block: The finally block is used to execute the important code of the program. It is executed whether an exception is handled or not.
