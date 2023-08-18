@@ -1,0 +1,54 @@
+Multithreading in java:
+> Multithreading in java is a process of executing multiple threads simultaneously. Thread is basically a lightweight sub-process, a smallest unit of processing. Multiprocessing and multithreading, both are used to achieve multitasking.
+
+Multitasking: Executing several tasks simultaneously is called multitasking. Multitasking can be achieved by two ways:
+    1. Process-based Multitasking(Multiprocessing)
+    2. Thread-based Multitasking(Multithreading)
+
+Process-based Multitasking(Multiprocessing): Each process has its own address in memory i.e. each process allocates separate memory area.
+
+1) Process-based Multitasking (Multiprocessing)
+Each process has an address in memory. In other words, each process allocates a separate memory area.
+A process is heavyweight.
+Cost of communication between the process is high.
+Switching from one process to another requires some time for saving and loading registers, memory maps, updating lists, etc.
+
+
+Thread-based Multitasking(Multithreading): Threads share the same address space.
+
+2) Thread-based Multitasking (Multithreading)
+Threads share the same address space.
+A thread is lightweight.
+Cost of communication between the thread is low.
+
+Multithreading in java is a process of executing multiple threads simultaneously.
+
+Advantages of Java Multithreading
+1) It doesn't block the user because threads are independent and you can perform multiple operations at the same time.
+
+2) You can perform many operations together, so it saves time.
+
+3) Threads are independent, so it doesn't affect other threads if an exception occurs in a single thread.
+
+Life cycle of a Thread (Thread States)
+In Java, a thread always exists in any one of the following states. These states are:
+    1. New
+    2. Active
+    3. Blocked / Waiting
+    4. Timed Waiting
+    5. Terminated
+
+1. New: A new thread begins its life cycle in the new state. It remains in this state until the program starts the thread. It is also referred to as a born thread.
+
+2. Active: After a newly born thread is started, the thread becomes active. A thread in this state is considered to be executing its task.
+
+3. Blocked / Waiting: A thread is in the blocked state when it tries to access a protected section of code that is currently locked by some other thread. It is also in the blocked state when it waits for a monitor lock to enter a synchronized block/method or reenter a synchronized block/method after calling Object.wait.
+
+4. Timed Waiting: A thread is in timed waiting state when it calls a method with a time out parameter. A thread is in the timed waiting state due to calling one of the following methods with a specified positive waiting time:
+    1. Thread.sleep
+    2. Object.wait with timeout
+    3. Thread.join with timeout
+    4. LockSupport.parkNanos
+    5. LockSupport.parkUntil
+
+5. Terminated: A thread is in the terminated or dead state when its run() method exits.
