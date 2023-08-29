@@ -2,7 +2,8 @@ import java.util.*;
 
 public class TypeSafety {
     public static void main(String[] args) {
-        List<String> list = new ArrayList<String>();
+
+        List list = new ArrayList();
 
         list.add("A");
         // list.add(123);
@@ -12,6 +13,19 @@ public class TypeSafety {
         // list.add(7845698);
 
         System.out.println(list);
+
+
+
+        List<String> list1 = new ArrayList<String>();
+
+        list1.add("A");
+        // list1.add(123);
+        // list1.add(123.456);
+        // list1.add(true);
+        // list1.add('A');
+        // list1.add(7845698);
+
+        System.out.println(list1);
     }
 }
 
