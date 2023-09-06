@@ -1,0 +1,83 @@
+1. Hospital Emergency Room Triage:
+   Design a system for a hospital's emergency room that uses an 'ArrayBlockingQueue' to manage patients based on their medical condition, ensuring that more critical patients are prioritized for treatment.
+
+2. Music Playlist Management:
+   Create a music player application that allows users to create playlists using a 'LinkedList', where they can add, remove, and reorder songs in their playlists efficiently.
+
+3. Airport Baggage Handling:
+   Implement a baggage handling system at an airport using an 'ArrayDeque' to ensure that luggage is loaded onto planes in the order it arrives and unloaded in the order it was loaded.
+
+4. Online Chat Application:
+   Develop a real-time online chat application that uses a 'LinkedBlockingQueue' to manage incoming messages from multiple users and delivers them to recipients in a fair and timely manner.
+
+5. Restaurant Order Queue:
+   Build a restaurant order queue system using an 'ArrayBlockingQueue', where orders from different tables are collected and processed by kitchen staff, ensuring timely delivery of food.
+
+6. Bookstore Inventory Updates:
+   Create an inventory management system for a bookstore that uses a 'LinkedList' to keep track of available books, their prices, and quantities, allowing for efficient updates and queries.
+
+7. Data Buffering for IoT Sensors:
+   Develop a system to buffer data from IoT sensors using a 'LinkedBlockingQueue' to ensure that sensor readings are stored and processed in real-time without data loss.
+
+8. Social Media Content Queue:
+   Design a content scheduling system for a social media platform that uses an 'ArrayDeque' to queue and publish posts at scheduled times while maintaining chronological order.
+
+9. Warehouse Robotics Control:
+   Implement a control system for warehouse robots using an 'ArrayBlockingQueue' to manage tasks such as picking, packing, and shipping orders efficiently.
+
+10. Train Reservation System:
+    Create a train reservation system where passengers can book tickets and join a waitlist for sold-out trains. Use a 'LinkedBlockingQueue' to manage reservations and waitlisted passengers.
+
+Test Cases:
+
+1. Hospital Emergency Room Triage:
+
+   - Test Case 1 Output: The higher-priority patient is treated first, followed by patients with lower priority.
+   - Test Case 2 Output: Patients with the same condition are dequeued in the order they were admitted.
+   - Test Case 3 Output: Patients are added and removed, and the priority queue is updated accordingly.
+
+2. Music Playlist Management:
+
+   - Test Case 1 Output: The playlist contains songs in the order they were added.
+   - Test Case 2 Output: Songs are removed from the playlist, and it is updated accordingly.
+   - Test Case 3 Output: Songs in the playlist are reordered, and the new order is maintained.
+
+3. Airport Baggage Handling:
+
+   - Test Case 1 Output: Luggage items are loaded onto planes in the order they arrived.
+   - Test Case 2 Output: Luggage items are unloaded from planes and processed in the order they were loaded.
+
+4. Online Chat Application:
+
+   - Test Case 1 Output: Messages from multiple users are delivered to the intended recipients in the correct order.
+   - Test Case 2 Output: The application successfully handles a large number of concurrent messages without data loss.
+
+5. Restaurant Order Queue:
+
+   - Test Case 1 Output: Orders from different tables are added to the kitchen's order queue in the correct sequence.
+   - Test Case 2 Output: Completed orders are removed from the queue in the order they were added.
+
+6. Bookstore Inventory Updates:
+
+   - Test Case 1 Output: Books are added to the inventory in the order they were received.
+   - Test Case 2 Output: Book quantities and prices are updated, and the inventory reflects the changes.
+
+7. Data Buffering for IoT Sensors:
+
+   - Test Case 1 Output: Sensor readings are successfully buffered in the `LinkedBlockingQueue`.
+   - Test Case 2 Output: Buffered data is processed without data loss during high-volume periods.
+
+8. Social Media Content Queue:
+
+   - Test Case 1 Output: Posts are scheduled and published in the correct order.
+   - Test Case 2 Output: The system handles time zone differences and daylight saving time adjustments, ensuring accurate scheduling.
+
+9. Warehouse Robotics Control:
+
+   - Test Case 1 Output: Warehouse robot tasks are processed in the correct order.
+   - Test Case 2 Output: The system efficiently handles concurrent task requests from multiple robots.
+
+10. Train Reservation System:
+
+    - Test Case 1 Output: Train tickets are booked, passengers are assigned seats, and tickets are confirmed.
+    - Test Case 2 Output: Passengers on the waitlist are accommodated if seats become available.
