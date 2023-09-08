@@ -24,6 +24,8 @@ public class CreateTable {
             stmt.executeUpdate(query);
             System.out.println("Table created successfully");
 
+            conn.close();
+
         } catch (Exception e) {
             System.out.println(e);
         }
