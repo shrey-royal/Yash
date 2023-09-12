@@ -8,7 +8,7 @@ public class ParameterizedQuery {
             Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/yashjdbc", "root", "root");
 
             String sql = "SELECT * FROM employees WHERE employee_id = ?";
-            PreparedStatement pstmt = conn.prepareStatement(sql);
+            PrepareStatement pstmt = conn.prepareStatement(sql);
 
             Scanner sc = new Scanner(System.in);
             System.out.println("Enter the employee id: ");
